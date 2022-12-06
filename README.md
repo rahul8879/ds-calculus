@@ -12,6 +12,9 @@ The aim of this course is to build the foundation for machine learning and deep 
 Prerequisite:
 Basic Python programming
 
+Youtube lecture
+https://www.youtube.com/watch?v=2adrcryL2M4
+
 
 Please connect us for more information
 +91 9252091676
