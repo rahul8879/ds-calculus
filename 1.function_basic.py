@@ -6,6 +6,7 @@ Created on Tue Dec  6 21:57:15 2022
 """
 
 
+
 #1/0 problem
 
 from sympy import limit, Symbol
@@ -13,10 +14,10 @@ from sympy import limit, Symbol
 # function to calculate the limit of a function 
 def test_v(input_1):
     #credit : https://bobbyhadz.com/blog/python-zerodivisionerror-float-division-by-zero
-    # Different types of indeterminant forms : https://byjus.com/maths/indeterminate-forms/
+    #Different types of indeterminant forms : https://byjus.com/maths/indeterminate-forms/
     try:
-        # if 1/0 
-        result = 1/(input_1-2)
+    
+        result = 1/(input_1-2)**2
         return result
     except ZeroDivisionError:
         x = Symbol('x')
@@ -28,4 +29,5 @@ def test_v(input_1):
      
 
 #test_v(1)
-print(test_v(2))
+if __name__ == "__main__":
+    print(test_v(2))
