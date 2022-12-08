@@ -26,20 +26,28 @@ def test_v(input_1):
         
         logging.debug('hey I am inside the try block')
 
-        result = 1/(input_1**2-4)
+        result = (input_1**2-9)/(input_1+3)
         return result
     
     except ZeroDivisionError:
-        logging.critical('hey I am from except block')
-
         x = Symbol('x')
-        y=(x-2)/(x**2-4)
-
-        result = limit(y, x, input_1)
+        
+        y = (x**2-9)/(x+3)
+        
+        result = limit(y,x,input_1)
         
         return result
-     
+    
+    
+    
+    
+ #logging.critical('hey I am from except block')
+
+ #x = Symbol('x')
+ #y=(x-2)/(x**2-4)
+
+ #result = limit(y, x, input_1)     
 
 #test_v(1)
 if __name__ == "__main__":
-    print(test_v(1))
+    print(test_v(-3))

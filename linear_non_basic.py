@@ -9,7 +9,8 @@ Created on Wed Dec  7 09:26:26 2022
 #How to convert sympy expression into numpy format.
 
 import numpy as np
-from sympy import *
+
+import sympy as sym
 import matplotlib.pyplot as plt
 
 
@@ -22,13 +23,6 @@ x = np.arange(-2,2.1,resolution)
 
 
 y = x**2 + 3*x**3 -x**4
-
-
-
-
-    
-
-
     
 plt.plot(x,y,label = 'y = x**2 + 3*x**3 -x**4')
 plt.grid()
@@ -37,6 +31,16 @@ plt.xlim(-2, 2)
 plt.xlabel("X")
 plt.ylabel("Y")
 plt.show()
+
+
+#create a symbolic variable
+beta = sym.var('beta')
+#print(type(beta))
+
+#define the function
+s_y = beta**2 + 3*beta**3 -beta**4
+print(s_y)
+sym.plot(s_y,(beta,-2,2),xlabel='x',ylabel=None,title=f'${sym.latex(s_y)}$')
     
     
     
